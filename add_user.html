@@ -1,0 +1,52 @@
+Enter file contents here
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Add Vendor</title>
+</head>
+<body>
+<div id="add_vendor">
+    
+    	
+<center><h1> Add a Vendor</h1>
+
+	<form action="http://localhost:9090/add_vendor"  method="post">
+        
+        <table border="3"  align="center" >
+            <tr><th>Vendor Name</th>
+			<th>Product Name</th>
+			<th>Product Liscence Number</th>
+			<th>Status</th>
+			<th>Start Date</th>
+			<th>End Date </th>
+			<th>Comments</th>
+			</tr> 
+			<tr>
+			<td><input type="text" id="vname" name="vname" placeholder="Enter Vendor Name" /></td>
+            <td><input type="text" id="pname" name="pname" placeholder="Enter Product Name" /></td>
+			<td><input type="text" id="pliscenceno" name="pliscenceno" value="1" readonly /></td>
+			<td><select id="selected_opt" name="selected_opt">
+				<option selected>To be initiated</option>
+				<option >Triggered with Vendor</option>
+				<option >PO initiated with Purchase</option>
+				<option >PO available</option>
+				<option>PO Shared with vendor</option>
+				<option>Renewal document signed</option>
+				<option>Renewed</option>
+				</select>
+			</td>
+			<td><input type="date" id="sdate" name="sdate" placeholder="yyyy-mm-dd" /></td>
+			<td><input type="date" id="edate" name="edate" placeholder="yyyy-mm-dd" /></td>
+            <td><textarea id="comments" name="comments" placeholder="Comment"></textarea></td>
+			</tr>
+            <tr><td colspan = 7 align="center"><input type="submit" value="Save Details" /></td></tr>
+		</table>
+		
+    </form>
+ 
+	</center>
+</div>
+</body>
+</html>
